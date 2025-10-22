@@ -1,0 +1,74 @@
+[
+  {
+    "serviceId": 1,
+    "serviceName": "Winter Coat Fitting for Dogs",
+    "providerName": "PawCare Studio",
+    "providerEmail": "info@pawcare.com",
+    "price": 25,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Custom coat fitting and warm outfit options to keep your dog comfortable in the cold.",
+    "image": "https://i.postimg.cc/example1.png",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 2,
+    "serviceName": "Winter Grooming & Paw Treatment",
+    "providerName": "CozyPets Grooming",
+    "providerEmail": "hello@cozypets.com",
+    "price": 30,
+    "rating": 4.8,
+    "slotsAvailable": 3,
+    "description": "Professional grooming with moisturizing paw balm and winter-safe shampoo.",
+    "image": "https://i.postimg.cc/example2.png",
+    "category": "Grooming"
+  },
+  {
+    "serviceId": 3,
+    "serviceName": "Heated Bed Installation",
+    "providerName": "WarmNest Solutions",
+    "providerEmail": "support@warmnest.com",
+    "price": 45,
+    "rating": 4.7,
+    "slotsAvailable": 5,
+    "description": "Safe heated bed setup and advice for small to medium pets.",
+    "image": "https://i.postimg.cc/example3.png",
+    "category": "Accessories"
+  },
+  {
+    "serviceId": 4,
+    "serviceName": "Cold-Weather Nutrition Plan",
+    "providerName": "VetCare Nutrition",
+    "providerEmail": "nutrition@vetcare.com",
+    "price": 35,
+    "rating": 4.85,
+    "slotsAvailable": 6,
+    "description": "Seasonal diet planning to keep pets energetic and warm during winter.",
+    "image": "https://i.postimg.cc/example4.png",
+    "category": "Nutrition"
+  },
+  {
+    "serviceId": 5,
+    "serviceName": "Paw Balm & Ice-Protection Treatment",
+    "providerName": "Paw Protectors",
+    "providerEmail": "contact@pawprotect.com",
+    "price": 20,
+    "rating": 4.6,
+    "slotsAvailable": 8,
+    "description": "Protective paw balm application and advice for icy surfaces.",
+    "image": "https://i.postimg.cc/example5.png",
+    "category": "Grooming"
+  },
+  {
+    "serviceId": 6,
+    "serviceName": "Emergency Cold Care Consult",
+    "providerName": "QuickVet Online",
+    "providerEmail": "help@quickvet.com",
+    "price": 40,
+    "rating": 4.95,
+    "slotsAvailable": 2,
+    "description": "Video consult for cold-related pet emergencies and first-aid tips.",
+    "image": "https://i.postimg.cc/example6.png",
+    "category": "Consultation"
+  }
+]

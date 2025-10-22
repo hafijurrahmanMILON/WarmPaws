@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light --default;
+}
+
+@plugin "daisyui/theme" {
+  name: "warmpaws";
+  default: true;
+  --color-primary: #d97706;
+  --color-secondary:	#FFF8DC;
+  --color-accent: #a16207;
+  --color-neutral: #3e2723;
+  /* --color-base-100: #FFF8E1; */
+  /* #D97706 */
+}
+
+.cream-color {
+  background-color: #FCF6E4;
+}
+
+.font-primary {
+  font-family: "Comfortaa", sans-serif;
+}
+
+.font-secondary {
+  font-family: "Nunito", sans-serif;
+}
