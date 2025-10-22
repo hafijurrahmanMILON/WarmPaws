@@ -4,7 +4,7 @@ import MyLink from "./MyLink";
 
 const Navbar = () => {
   return (
-    <div className="navbar  shadow-md px-4 md:px-8">
+    <div className="navbar  shadow-md px-4 md:px-42">
       <div className="navbar-start flex items-center gap-2">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">

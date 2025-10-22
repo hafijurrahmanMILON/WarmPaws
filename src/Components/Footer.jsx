@@ -5,7 +5,7 @@ import linkdin from "../assets/linkdin.png";
 
 const Footer = () => {
   return (
-    <footer className="footer md:footer-horizontal bg-secondary  text-primary font-secondary p-10  md:px-42">
+    <footer className="footer md:footer-horizontal bg-secondary  text-primary  p-10  md:px-42">
       <aside>
         <img className="h-10 w-10" src={logo} alt="" />
         <p className="text-2xl font-primary font-bold">WarmPaws</p>

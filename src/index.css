@@ -10,21 +10,25 @@
   name: "warmpaws";
   default: true;
   --color-primary: #d97706;
-  --color-secondary:	#FFF8DC;
+  --color-secondary: #fff8dc;
   --color-accent: #a16207;
   --color-neutral: #3e2723;
   /* --color-base-100: #FFF8E1; */
   /* #D97706 */
 }
 
+* {
+  font-family: "Nunito", sans-serif;
+}
+
 .cream-color {
-  background-color: #FCF6E4;
+  background-color: #fcf6e4;
 }
 
 .font-primary {
   font-family: "Comfortaa", sans-serif;
 }
 
-.font-secondary {
+/* .font-secondary {
   font-family: "Nunito", sans-serif;
-}
+} */
