@@ -9,9 +9,9 @@
 @plugin "daisyui/theme" {
   name: "warmpaws";
   default: true;
-  --color-primary: #d97706;
+  --color-primary: #f59e0b;
   --color-secondary: #fff8dc;
-  --color-accent: #a16207;
+  --color-accent: #D97706;
   --color-neutral: #3e2723;
   /* --color-base-100: #FFF8E1; */
   /* #D97706 */
