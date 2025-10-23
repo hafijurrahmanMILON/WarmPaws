@@ -7,7 +7,7 @@ const WinterTips = () => {
   const allTips = use(tipsPromise);
 
   return (
-    <div className="py-16 bg-base-100">
+    <div className="py-16 bg-base-100 mt-12">
       <div className="text-center mb-10">
         <h1 className="font-bold font-primary text-5xl">
           {" "}
@@ -19,13 +19,13 @@ const WinterTips = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-5 md:px-10 lg:px-20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-5 md:px-10 lg:px-20 ">
         {allTips.map((tip, index) => (
           <div
             key={tip.id}
             data-aos="fade-up"
             data-aos-delay={index * 150}
-            className="relative bg-white shadow-md rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-500 group overflow-hidden"
+            className="relative bg-white shadow-md rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-500 group overflow-hidden border border-amber-300"
           >
             <div className="flex justify-center mb-4">
               <img
@@ -42,7 +42,7 @@ const WinterTips = () => {
             <img
               src={pawPrint}
               alt="paw"
-              className="absolute bottom-4 right-4 w-8 opacity-0  group-hover:opacity-40 transition-opacity duration-700"
+              className="absolute bottom-4 right-4 w-8 opacity-0  group-hover:opacity-100 transition-opacity duration-700"
               data-aos="zoom-in"
               data-aos-delay="400"
             />

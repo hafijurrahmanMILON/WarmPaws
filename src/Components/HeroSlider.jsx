@@ -31,7 +31,7 @@ function HeroSlider() {
             />
 
             <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4">
-              <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold font-primary drop-shadow-lg">
+              <h2 className="text-2xl md:text-4xl lg:text-7xl font-bold font-primary drop-shadow-lg text-primary">
                 Keep Your Cat Cozy This Winter
               </h2>
               <p className="mt-3 text-sm md:text-base lg:text-lg font-second drop-shadow-md">
@@ -51,7 +51,7 @@ function HeroSlider() {
               className="w-full h-full object-cover filter brightness-60 blur-[1px]"
             />
             <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4">
-              <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold font-primary drop-shadow-lg">
+              <h2 className="text-2xl md:text-4xl lg:text-7xl font-bold font-primary drop-shadow-lg text-primary">
                 Winter Playtime, Safely
               </h2>
               <p className="mt-3 text-sm md:text-base lg:text-lg font-second drop-shadow-md">
@@ -70,7 +70,7 @@ function HeroSlider() {
               className="w-full h-full object-cover filter brightness-60 blur-[1px]"
             />
             <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4">
-              <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold font-primary drop-shadow-lg">
+              <h2 className="text-2xl md:text-4xl lg:text-7xl font-bold font-primary drop-shadow-lg text-primary">
                 Warm Hearts & Paws
               </h2>
               <p className="mt-3 text-sm md:text-base lg:text-lg font-second drop-shadow-md">
