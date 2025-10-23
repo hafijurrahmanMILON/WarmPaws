@@ -34,7 +34,7 @@ const ServiceCard = ({ service }) => {
         </div>
 
         <div className="card-actions">
-          <button className="btn btn-primary text-white btn-block font-primary hover:bg-accent">
+          <button className="btn bg-[#d97706] text-white btn-block font-primary hover:bg-[#f59e0b]">
             View Details
           </button>
         </div>

@@ -11,18 +11,18 @@
   default: true;
   --color-primary: #f59e0b;
   --color-secondary: #fff8dc;
-  --color-accent: #D97706;
+  --color-accent: #d97706;
   --color-neutral: #3e2723;
   /* --color-base-100: #FFF8E1; */
   /* #D97706 */
 }
 
-* {
-  font-family: "Nunito", sans-serif;
-}
-
 .cream-color {
   background-color: #fcf6e4;
+}
+
+* {
+  font-family: "Nunito", sans-serif;
 }
 
 .font-primary {

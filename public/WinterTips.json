@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Warm Clothing for Pets",
+    "description": "Dress your pet in sweaters or jackets to protect them from the cold.",
+    "icon": "/icons/warm-cloth.png"
+  },
+  {
+    "id": 2,
+    "title": "Protect Their Paws",
+    "description": "Use paw balm or booties to prevent cracking from cold surfaces.",
+    "icon": "/icons/paw-care.png"
+  },
+  {
+    "id": 3,
+    "title": "Ensure Proper Hydration",
+    "description": "Pets need water even in winter — keep their bowl fresh and full.",
+    "icon": "/icons/pet-hydration.png"
+  },
+  {
+    "id": 4,
+    "title": "Create a Warm Sleeping Spot",
+    "description": "Use blankets or heated pads to keep your pet’s bed cozy.",
+    "icon": "/icons/bed.png"
+  }
+]
