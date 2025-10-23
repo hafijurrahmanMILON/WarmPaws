@@ -6,10 +6,11 @@ import { router } from "./Routes/Router.jsx";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Toaster } from "react-hot-toast";
+import AuthProvider from "./Provider/AuthProvider.jsx";
 
 // AOS.init({
-//   duration: 1000, // animation কত সময় থাকবে
-//   once: true, // scroll করে একবার দেখানোর পর আবার repeat করবে না
+//   duration: 1000,
+//   once: true,
 // });
 AOS.init({
   duration: 800,
@@ -19,7 +20,9 @@ AOS.init({
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Toaster />
-    <RouterProvider router={router}></RouterProvider>
+    <AuthProvider>
+      <Toaster />
+      <RouterProvider router={router}></RouterProvider>
+    </AuthProvider>
   </StrictMode>
 );

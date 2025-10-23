@@ -17,7 +17,7 @@ const ServiceDetails = () => {
   }, [id, allService]);
 
   return (
-    <div className="flex items-center justify-center my-8 min-h-screen overflow-hidden">
+    <div className="min-h-screen flex items-center justify-center my-3">
       <ServiceDetailsCard service={service}></ServiceDetailsCard>
     </div>
   );

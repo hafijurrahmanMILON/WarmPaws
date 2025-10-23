@@ -1,8 +1,26 @@
 import { Link, NavLink } from "react-router";
 import logo from "../assets/favicon.png";
 import MyLink from "./MyLink";
+import { useContext } from "react";
+import { AuthContext } from "../Context/AuthContext";
+import userIcon from "../assets/user.png";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
+  const { user, setUser, signOutFunc } = useContext(AuthContext);
+  console.log(user);
+
+  const handleSignOut = () => {
+    signOutFunc()
+      .then(() => {
+        toast.success("SignOut Successful");
+        setUser(null);
+      })
+      .catch((error) => {
+        toast.error(error.message);
+        console.log(error.message);
+      });
+  };
   return (
     <div className="navbar  shadow-md px-4 md:px-42">
       <div className="navbar-start flex items-center gap-2">
@@ -60,15 +78,35 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <Link
-          to="/login"
-          className="btn  bg-primary text-white hover:bg-accent"
-        >
-          Login
-        </Link>
-        {/* <button className="btn btn-sm bg-secondary text-neutral hover:bg-primary">
-          Register
-        </button> */}
+        {user ? (
+          <div className="flex justify-center items-center gap-3">
+            <div
+              className="tooltip  tooltip-bottom"
+              data-tip={user?.displayName || "your name"}
+            >
+              <img
+                src={user?.photoURL || `${userIcon}`}
+                className="h-13 w-13 object-cover rounded-full"
+                alt=""
+              />
+            </div>
+            <button
+              onClick={handleSignOut}
+              className="btn rounded-full font-semibold text-xl p-5  bg-primary text-white hover:bg-gradient-to-br from-amber-400 to-orange-500"
+            >
+              Log out
+            </button>
+          </div>
+        ) : (
+          <div>
+            <Link
+              to="/login"
+              className="btn rounded-full font-semibold text-xl p-5  bg-primary text-white hover:bg-gradient-to-br from-amber-400 to-orange-500"
+            >
+              Login
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );

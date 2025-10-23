@@ -90,7 +90,7 @@ const ServiceDetailsCard = ({ service }) => {
 
           <button
             type="submit"
-            className="btn btn-primary w-full text-white font-primary hover:bg-orange-600 mt-4 py-2"
+            className="btn btn-primary w-full text-white font-primary hover:bg-gradient-to-br from-amber-400 to-orange-500 mt-4 py-2"
           >
             Book Now
           </button>

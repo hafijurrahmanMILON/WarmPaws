@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import userIMG from "../assets/vetImage1.jpg";
+import { AuthContext } from "../Context/AuthContext";
+import { Link } from "react-router";
 
 const MyProfile = () => {
+  const { user, setUser, signOutFunc } = useContext(AuthContext);
   return (
     <div className="min-h-full items-center justify-center p-6 mt-10">
       <div className="max-w-4xl mx-auto">
@@ -19,13 +22,13 @@ const MyProfile = () => {
             <div className="md:w-1/3 bg-gradient-to-br from-amber-400 to-orange-500 p-8 flex flex-col items-center justify-center text-white">
               <div className="w-48 h-48 rounded-full bg-white bg-opacity-20 p-2 mb-6">
                 <img
-                  src={userIMG}
+                  src={user?.photoURL || userIMG}
                   alt=""
-                  className="w-full h-full rounded-full  flex items-center justify-center"
+                  className="w-full h-full rounded-full object-cover"
                 />
               </div>
               <h2 className="text-2xl font-primary font-bold text-center">
-                John Doe
+                {user?.displayName || "your name"}
               </h2>
               <p className="text-amber-100 text-center mt-2">WarmPaws Member</p>
             </div>
@@ -46,7 +49,9 @@ const MyProfile = () => {
                         </span>
                       </div>
                       <div className="sm:w-2/3">
-                        <p className="text-gray-800">Hablu Mia</p>
+                        <p className="text-gray-800">
+                          {user?.displayName || "your name"}
+                        </p>
                       </div>
                     </div>
 
@@ -58,16 +63,21 @@ const MyProfile = () => {
                         </span>
                       </div>
                       <div className="sm:w-2/3">
-                        <p className="text-gray-800">hablu@example.com</p>
+                        <p className="text-gray-800">
+                          {user?.email || "your email"}
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <div className="flex justify-center mt-8">
-                  <button className="btn btn-primary text-white font-primary hover:bg-orange-600 px-8 py-3 text-lg">
+                  <Link
+                    to="/updateProfile"
+                    className="btn btn-primary text-white font-primary hover:bg-orange-600 px-8 py-3 text-lg"
+                  >
                     Update Profile
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

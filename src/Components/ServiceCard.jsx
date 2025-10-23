@@ -37,7 +37,7 @@ const ServiceCard = ({ service }) => {
         <div className="card-actions">
           <Link
             to={`/serviceDetails/${serviceId}`}
-            className="btn bg-[#d97706] text-white btn-block font-primary hover:bg-[#f59e0b]"
+            className="btn btn-primary text-white btn-block font-primary hover:bg-gradient-to-br from-amber-400 to-orange-500"
           >
             View Details
           </Link>
