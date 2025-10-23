@@ -19,7 +19,7 @@ const WinterTips = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-5 md:px-10 lg:px-20 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-10 md:px-6 lg:px-10 ">
         {allTips.map((tip, index) => (
           <div
             key={tip.id}

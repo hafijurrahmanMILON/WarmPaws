@@ -3,6 +3,9 @@ import MainLayout from "../Layouts/MainLayout";
 import Home from "../Pages/Home";
 import Services from "../Pages/Services";
 import MyProfile from "../Pages/MyProfile";
+import ServiceDetails from "../Pages/ServiceDetails";
+import Login from "../Pages/Login";
+import Signup from "../Pages/Signup";
 
 export const router = createBrowserRouter([
   {
@@ -22,5 +25,18 @@ export const router = createBrowserRouter([
         Component: MyProfile,
       },
     ],
+  },
+  {
+    path: "/serviceDetails/:id",
+    element: <ServiceDetails></ServiceDetails>,
+    loader: () => fetch("/services.json"),
+  },
+  {
+    path: "/login",
+    Component: Login,
+  },
+  {
+    path: "/signup",
+    Component: Signup,
   },
 ]);

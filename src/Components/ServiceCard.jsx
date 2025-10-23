@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router";
 
 const ServiceCard = ({ service }) => {
-  console.log(service);
-  const { image, serviceName, rating, price } = service;
+  // console.log(service);
+  const { image, serviceName, rating, price, serviceId } = service;
   return (
     <div className="card w-full bg-base-200 shadow-lg  rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
       <figure className="h-72 p-3">
@@ -34,9 +35,12 @@ const ServiceCard = ({ service }) => {
         </div>
 
         <div className="card-actions">
-          <button className="btn bg-[#d97706] text-white btn-block font-primary hover:bg-[#f59e0b]">
+          <Link
+            to={`/serviceDetails/${serviceId}`}
+            className="btn bg-[#d97706] text-white btn-block font-primary hover:bg-[#f59e0b]"
+          >
             View Details
-          </button>
+          </Link>
         </div>
       </div>
     </div>
