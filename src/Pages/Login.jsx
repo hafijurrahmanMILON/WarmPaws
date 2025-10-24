@@ -5,7 +5,10 @@ import { AuthContext } from "../Context/AuthContext";
 import toast from "react-hot-toast";
 
 const Login = () => {
-  const { loginFunc, setUser, googleSignIn } = useContext(AuthContext);
+  // const emailRef = useRef();
+  // console.log(emailRef.current.value);
+  const { loginFunc, setUser, googleSignIn, email, setEmail } =
+    useContext(AuthContext);
   const [show, setShow] = useState(false);
 
   const location = useLocation();
@@ -105,6 +108,8 @@ const Login = () => {
                   <input
                     type="email"
                     name="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your email"
                     className="input w-full bg-white border-orange-200 focus:border-0"
                     autoComplete="email"
@@ -119,7 +124,7 @@ const Login = () => {
                     name="password"
                     placeholder="Enter your password"
                     className="input w-full bg-white border-orange-200 focus:border-0"
-                    autocomplete="new-password"
+                    autoComplete="new-password"
                     required
                   />
                   <span
@@ -131,14 +136,17 @@ const Login = () => {
                 </div>
 
                 <div className="text-right">
-                  <a className="text-sm text-primary hover:underline hover:cursor-pointer">
+                  <Link
+                    to="/resetPassword"
+                    className="text-sm text-primary hover:underline hover:cursor-pointer"
+                  >
                     Forgot your password?
-                  </a>
+                  </Link>
                 </div>
 
                 <button
                   type="submit"
-                  className="btn btn-primary text-white btn-block font-primary hover:bg-orange-600 text-lg py-3"
+                  className="btn btn-primary text-white btn-block font-primary hover:bg-gradient-to-br from-amber-400 to-orange-500 text-lg py-3"
                 >
                   Login
                 </button>

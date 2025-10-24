@@ -9,12 +9,14 @@ import {
   signOut,
   GoogleAuthProvider,
   updateProfile,
+  sendPasswordResetEmail,
 } from "firebase/auth";
 
 const googleProvider = new GoogleAuthProvider();
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [email, setEmail] = useState("");
   console.log(user);
 
   const createUserFunc = (email, password) => {
@@ -37,6 +39,10 @@ const AuthProvider = ({ children }) => {
     return updateProfile(auth.currentUser, { displayName, photoURL });
   };
 
+  const resetPasswordFunc = (email) => {
+    return sendPasswordResetEmail(auth, email);
+  };
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
@@ -49,11 +55,14 @@ const AuthProvider = ({ children }) => {
   const authData = {
     user,
     setUser,
+    email,
+    setEmail,
     createUserFunc,
     loginFunc,
     googleSignIn,
     signOutFunc,
     updateProfileFunc,
+    resetPasswordFunc,
   };
 
   return <AuthContext value={authData}>{children}</AuthContext>;

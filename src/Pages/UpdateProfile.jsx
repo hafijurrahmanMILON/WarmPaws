@@ -5,7 +5,9 @@ import toast from "react-hot-toast";
 const UpdateProfile = () => {
   const { user, setUser, updateProfileFunc } = useContext(AuthContext);
 
+  
   const handleUpdateProfile = (e) => {
+    console.log('updatePRoile')
     e.preventDefault();
     const displayName = e.target.name.value;
     const photoURL = e.target.photoURL.value;
@@ -58,7 +60,7 @@ const UpdateProfile = () => {
               name="name"
               placeholder="Enter your name"
               className="input w-full bg-white border-orange-200 focus:border-0"
-              autocomplete="name"
+              autoComplete="name"
               // required
             />
           </div>
@@ -70,12 +72,12 @@ const UpdateProfile = () => {
               name="photoURL"
               placeholder="Enter your photoURL"
               className="input w-full bg-white border-orange-200 focus:border-0"
-              autocomplete="photo"
+              autoComplete="photo"
             />
           </div>
           <button
             type="submit"
-            className="btn btn-primary text-white font-primary hover:bg-gradient-to-br from-amber-400 to-orange-500 w-full py-3 text-lg mt-2"
+            className="btn btn-primary text-white font-primary hover:bg-linear-to-br from-amber-400 to-orange-500 w-full py-3 text-lg mt-2"
           >
             Update Profile
           </button>

@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
-import userIMG from "../assets/vetImage1.jpg";
+import userIMG from "../assets/user.png";
 import { AuthContext } from "../Context/AuthContext";
 import { Link } from "react-router";
 
 const MyProfile = () => {
   const { user, setUser, signOutFunc } = useContext(AuthContext);
   return (
-    <div className="min-h-full items-center justify-center p-6 mt-10">
+    <div className="min-h-screen p-6 mt-28">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-8">
           <h1 className="font-primary text-4xl font-bold text-primary mb-2">
@@ -50,7 +50,7 @@ const MyProfile = () => {
                       </div>
                       <div className="sm:w-2/3">
                         <p className="text-gray-800">
-                          {user?.displayName || "your name"}
+                          {user?.displayName || ""}
                         </p>
                       </div>
                     </div>
@@ -64,7 +64,7 @@ const MyProfile = () => {
                       </div>
                       <div className="sm:w-2/3">
                         <p className="text-gray-800">
-                          {user?.email || "your email"}
+                          {user?.email || ""}
                         </p>
                       </div>
                     </div>
@@ -72,12 +72,21 @@ const MyProfile = () => {
                 </div>
 
                 <div className="flex justify-center mt-8">
-                  <Link
-                    to="/updateProfile"
-                    className="btn btn-primary text-white font-primary hover:bg-orange-600 px-8 py-3 text-lg"
-                  >
-                    Update Profile
-                  </Link>
+                  {user ? (
+                    <Link
+                      to="/updateProfile"
+                      className="btn btn-primary text-white font-primary hover:bg-gradient-to-br from-amber-400 to-orange-500 px-8 py-3 text-lg"
+                    >
+                      Update Profile
+                    </Link>
+                  ) : (
+                    <Link
+                      to="/login"
+                      className="btn btn-primary text-white font-primary hover:bg-gradient-to-br from-amber-400 to-orange-500 px-8 py-3 text-lg"
+                    >
+                      Login
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>

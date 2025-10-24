@@ -133,7 +133,7 @@ const Signup = () => {
                     name="name"
                     placeholder="Enter your name"
                     className="input w-full bg-white border-orange-200 focus:border-0"
-                    autocomplete="name"
+                    autoComplete="name"
                     // required
                   />
                 </div>
@@ -145,7 +145,7 @@ const Signup = () => {
                     name="photoURL"
                     placeholder="Enter your photoURL"
                     className="input w-full bg-white border-orange-200 focus:border-0"
-                    autocomplete="photo"
+                    autoComplete="photo"
                   />
                 </div>
                 {/* email */}
@@ -156,7 +156,7 @@ const Signup = () => {
                     name="email"
                     placeholder="Enter your email"
                     className="input w-full bg-white border-orange-200 focus:border-0"
-                    autocomplete="email"
+                    autoComplete="email"
                     required
                   />
                 </div>
@@ -168,7 +168,7 @@ const Signup = () => {
                     name="password"
                     placeholder="Enter your password"
                     className="input w-full bg-white border-orange-200 focus:border-0"
-                    autocomplete="new-password"
+                    autoComplete="new-password"
                     required
                   />
                   <span

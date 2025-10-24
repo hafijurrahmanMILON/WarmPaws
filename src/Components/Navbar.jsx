@@ -43,7 +43,7 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-neutral font-medium"
+            className="menu menu-sm dropdown-content mt-3  p-2 shadow bg-base-100 rounded-box w-48 text-neutral font-bold text-xl"
           >
             <li>
               <MyLink to="/">Home</MyLink>
@@ -86,13 +86,13 @@ const Navbar = () => {
             >
               <img
                 src={user?.photoURL || `${userIcon}`}
-                className="h-13 w-13 object-cover rounded-full"
+                className="h-12 w-12 object-cover rounded-full"
                 alt=""
               />
             </div>
             <button
               onClick={handleSignOut}
-              className="btn rounded-full font-semibold text-xl p-5  bg-primary text-white hover:bg-gradient-to-br from-amber-400 to-orange-500"
+              className="btn rounded-full font-semibold text-lg p-3  bg-primary text-white hover:bg-gradient-to-br from-amber-400 to-orange-500"
             >
               Log out
             </button>
