@@ -4,12 +4,12 @@ import vet2 from "../assets/vet2.jpg";
 import vet3 from "../assets/vet3.jpg";
 const Vets = () => {
   return (
-    <div className=" flex flex-col md:flex-row gap-[40px] md:gap-[120px] justify-center items-center py-24 mt-12">
+    <div className=" flex flex-col md:flex-row gap-10 md:gap-18 lg:gap-38 justify-center items-center py-24 mt-12">
       <div>
         <div
           className="flex flex-col justify-center items-center text-center relative "
           data-aos="fade-right"
-          data-aos-delay="300"
+          data-aos-delay="200"
         >
           <img
             src={vet1}
@@ -27,7 +27,7 @@ const Vets = () => {
         <div
           className="flex flex-col justify-center text-center relative "
           data-aos="zoom-in"
-          data-aos-delay="300"
+          data-aos-delay="200"
         >
           <img
             src={vet2}
@@ -45,7 +45,7 @@ const Vets = () => {
         <div
           className="flex flex-col justify-center text-center relative"
           data-aos="fade-left"
-          data-aos-delay="300"
+          data-aos-delay="200"
         >
           <img
             src={vet3}

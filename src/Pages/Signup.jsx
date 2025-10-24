@@ -5,8 +5,14 @@ import toast from "react-hot-toast";
 import { IoEyeOffOutline, IoEyeOutline } from "react-icons/io5";
 
 const Signup = () => {
-  const { user, setUser, createUserFunc, googleSignIn, updateProfileFunc } =
-    useContext(AuthContext);
+  const {
+    setUser,
+    createUserFunc,
+    googleSignIn,
+    updateProfileFunc,
+    error,
+    setError,
+  } = useContext(AuthContext);
   const [show, setShow] = useState(false);
 
   const navigate = useNavigate();
@@ -20,9 +26,7 @@ const Signup = () => {
     // console.log({ name, photoURL, email, password });
     const regExPass = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
     if (!regExPass.test(password)) {
-      toast.error(
-        "Password must be at least 6 characters long and include both uppercase and lowercase letters."
-      );
+      setError(true);
       return;
     }
     createUserFunc(email, password)
@@ -32,6 +36,7 @@ const Signup = () => {
             const user = res.user;
             toast.success("Account created Successfully!");
             setUser({ ...user, displayName, photoURL });
+            setError(false);
             navigate("/");
           })
           .catch((error) => {
@@ -88,7 +93,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="min-h-screen bg-amber-50 flex items-center justify-center p-6">
+    <div className="min-h-screen  flex items-center justify-center p-6">
       <div className="max-w-7xl w-full bg-white rounded-2xl shadow-lg overflow-hidden">
         <div className="flex flex-col lg:flex-row">
           <div className="lg:w-1/2 hidden md:block bg-gradient-to-br from-amber-400 to-orange-500 p-12 text-white">
@@ -178,10 +183,15 @@ const Signup = () => {
                     {show ? <IoEyeOutline /> : <IoEyeOffOutline />}
                   </span>
                 </div>
-
+                {error && (
+                  <p className="text-sm text-red-600 font-light w-4/5">
+                    Password must be at least 6 characters long and include both
+                    uppercase and lowercase letters.
+                  </p>
+                )}
                 <button
                   type="submit"
-                  className="btn btn-primary text-white w-full font-primary hover:bg-gradient-to-br from-amber-400 to-orange-500 text-lg py-3 mt-6"
+                  className="btn btn-primary text-white w-full font-primary hover:bg-gradient-to-br from-amber-400 to-orange-500 text-lg py-3 mt-3"
                 >
                   Register
                 </button>

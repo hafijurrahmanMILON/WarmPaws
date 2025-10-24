@@ -7,7 +7,7 @@ const WinterTips = () => {
   const allTips = use(tipsPromise);
 
   return (
-    <div className="py-16 bg-base-100 mt-12">
+    <div className="py-16 mt-12">
       <div className="text-center mb-10">
         <h1 className="font-bold font-primary text-5xl">
           {" "}
@@ -20,11 +20,11 @@ const WinterTips = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-10 md:px-6 lg:px-10 ">
-        {allTips.map((tip, index) => (
+        {allTips.map((tip,id) => (
           <div
             key={tip.id}
             data-aos="fade-up"
-            data-aos-delay={index * 150}
+            data-aos-delay={id * 200}
             className="relative bg-white shadow-md rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-500 group overflow-hidden border border-amber-300"
           >
             <div className="flex justify-center mb-4">
@@ -44,7 +44,7 @@ const WinterTips = () => {
               alt="paw"
               className="absolute bottom-4 right-4 w-8 opacity-0  group-hover:opacity-100 transition-opacity duration-700"
               data-aos="zoom-in"
-              data-aos-delay="400"
+              data-aos-delay="500"
             />
           </div>
         ))}

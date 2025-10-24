@@ -12,13 +12,14 @@ import UpdateProfile from "../Pages/UpdateProfile";
 import ResetPassword from "../Pages/ResetPassword";
 
 export const router = createBrowserRouter([
-  {
-    path: "*",
-    element: <RouteError></RouteError>,
-  },
+  // {
+  //   path: "*",
+  //   element: <RouteError></RouteError>,
+  // },
   {
     path: "/",
     Component: MainLayout,
+    errorElement: <RouteError></RouteError>,
     children: [
       {
         index: true,
@@ -49,15 +50,14 @@ export const router = createBrowserRouter([
         path: "/resetPassword",
         Component: ResetPassword,
       },
+      {
+        path: "/login",
+        Component: Login,
+      },
+      {
+        path: "/signup",
+        Component: Signup,
+      },
     ],
-  },
-
-  {
-    path: "/login",
-    Component: Login,
-  },
-  {
-    path: "/signup",
-    Component: Signup,
   },
 ]);

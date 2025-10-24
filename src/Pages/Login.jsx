@@ -65,7 +65,7 @@ const Login = () => {
       });
   };
   return (
-    <div className="min-h-screen bg-amber-50 flex items-center justify-center p-6">
+    <div className="min-h-screen  flex items-center justify-center p-6">
       <div className="max-w-6xl w-full bg-white rounded-2xl shadow-lg border border-orange-100 overflow-hidden">
         <div className="flex flex-col lg:flex-row">
           <div className="lg:w-1/2 hidden md:block bg-gradient-to-br from-amber-400 to-orange-500 p-12 text-white">

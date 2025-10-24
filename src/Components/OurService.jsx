@@ -14,7 +14,7 @@ const OurService = () => {
           <span className="font-primary text-primary">WarmPaws</span> Winter
           Favorites
         </h1>
-        <p className="font-semibold">
+        <p className="font-semibold text-gray-500">
           Explore our most-loved seasonal services for cozy, happy pets.
         </p>
       </div>

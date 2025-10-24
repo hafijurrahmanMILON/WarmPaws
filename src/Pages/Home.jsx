@@ -3,6 +3,7 @@ import HeroSlider from "../Components/HeroSlider";
 import OurService from "../Components/OurService";
 import WinterTips from "../Components/WinterTips";
 import Vets from "../Components/Vets";
+import ExtraSection from "../Components/ExtraSection";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
           <WinterTips></WinterTips>
         </div>
       </div>
+      <ExtraSection></ExtraSection>
       <Vets></Vets>
     </div>
   );

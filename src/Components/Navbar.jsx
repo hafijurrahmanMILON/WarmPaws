@@ -57,15 +57,15 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <button className="font-bold text-lg flex items-center gap-2">
+        <div className="font-bold text-lg flex items-center gap-2">
           <img className="w-10" src={logo} alt="WarmPaws Logo" />
           <p className="text-primary font-extrabold text-2xl font-primary">
             WarmPaws
           </p>
-        </button>
+        </div>
       </div>
 
-      <div className="navbar-end flex items-center space-x-2">
+      <div className="navbar-center">
         <ul className="hidden lg:flex menu menu-horizontal px-1 text-lg font-semibold">
           <li>
             <MyLink to="/">Home</MyLink>
@@ -77,7 +77,9 @@ const Navbar = () => {
             <MyLink to="profile">My Profile</MyLink>
           </li>
         </ul>
+      </div>
 
+      <div className="navbar-end flex items-center space-x-2">
         {user ? (
           <div className="flex justify-center items-center gap-3">
             <div

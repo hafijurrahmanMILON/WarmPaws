@@ -4,7 +4,7 @@ import { AuthContext } from "../Context/AuthContext";
 import { Link } from "react-router";
 
 const MyProfile = () => {
-  const { user, setUser, signOutFunc } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   return (
     <div className="min-h-screen p-6 mt-28">
       <div className="max-w-4xl mx-auto">
@@ -63,9 +63,7 @@ const MyProfile = () => {
                         </span>
                       </div>
                       <div className="sm:w-2/3">
-                        <p className="text-gray-800">
-                          {user?.email || ""}
-                        </p>
+                        <p className="text-gray-800">{user?.email || ""}</p>
                       </div>
                     </div>
                   </div>
@@ -75,14 +73,14 @@ const MyProfile = () => {
                   {user ? (
                     <Link
                       to="/updateProfile"
-                      className="btn btn-primary text-white font-primary hover:bg-gradient-to-br from-amber-400 to-orange-500 px-8 py-3 text-lg"
+                      className="btn rounded-full btn-primary text-white font-primary hover:bg-gradient-to-br from-amber-400 to-orange-500 px-16 py-5 text-lg"
                     >
                       Update Profile
                     </Link>
                   ) : (
                     <Link
                       to="/login"
-                      className="btn btn-primary text-white font-primary hover:bg-gradient-to-br from-amber-400 to-orange-500 px-8 py-3 text-lg"
+                      className="btn rounded-full btn-primary text-white font-primary hover:bg-gradient-to-br from-amber-400 to-orange-500 px-16 py-5 text-lg"
                     >
                       Login
                     </Link>
