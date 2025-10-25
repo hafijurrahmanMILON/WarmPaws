@@ -62,10 +62,10 @@ const Footer = () => {
             <div className="flex ">
               <input
                 type="email"
-                className="input bg-white rounded-none border-orange-200 rounded-l-full focus:border-0 text-lg"
-                placeholder="Email"
+                className="input bg-white  border-none  rounded-l-full  text-lg focus:outline-none focus:ring-0  px-3 py-3"
+                placeholder="email"
               />
-              <button className="btn  btn-primary text-white font-primary rounded-none rounded-r-full hover:bg-gradient-to-br from-amber-400 to-orange-500">
+              <button className="btn   text-white font-primary rounded-none rounded-r-full bg-gradient-to-br from-amber-400 to-orange-500 hover:opacity-90 transition">
                 Subscribe
               </button>
             </div>

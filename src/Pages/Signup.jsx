@@ -142,7 +142,7 @@ const Signup = () => {
                     type="text"
                     name="name"
                     placeholder="Enter your name"
-                    className="input rounded-lg w-full bg-white border-orange-200 focus:border-0"
+                    className="input rounded-lg w-full bg-white border-orange-200 focus:outline-none focus:ring-0"
                     autoComplete="name"
                     // required
                   />
@@ -154,7 +154,7 @@ const Signup = () => {
                     type="text"
                     name="photoURL"
                     placeholder="Enter your photoURL"
-                    className="input rounded-lg w-full bg-white border-orange-200 focus:border-0"
+                    className="input rounded-lg w-full bg-white border-orange-200 focus:outline-none focus:ring-0"
                     autoComplete="photo"
                   />
                 </div>
@@ -165,7 +165,7 @@ const Signup = () => {
                     type="email"
                     name="email"
                     placeholder="Enter your email"
-                    className="input rounded-lg w-full bg-white border-orange-200 focus:border-0"
+                    className="input rounded-lg w-full bg-white border-orange-200 focus:outline-none focus:ring-0"
                     autoComplete="email"
                     required
                   />
@@ -177,7 +177,7 @@ const Signup = () => {
                     type={show ? `text` : `password`}
                     name="password"
                     placeholder="Enter your password"
-                    className="input rounded-lg w-full bg-white border-orange-200 focus:border-0"
+                    className="input rounded-lg w-full bg-white border-orange-200 focus:outline-none focus:ring-0"
                     autoComplete="new-password"
                     required
                   />

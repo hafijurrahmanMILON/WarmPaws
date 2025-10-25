@@ -112,7 +112,7 @@ const Login = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your email"
-                    className="input rounded-lg w-full bg-white border-orange-200 focus:border-0"
+                    className="input focus:outline-none focus:ring-0 rounded-lg w-full bg-white border-orange-200 "
                     autoComplete="email"
                     required
                   />
@@ -124,7 +124,7 @@ const Login = () => {
                     type={show ? `text` : `password`}
                     name="password"
                     placeholder="Enter your password"
-                    className="input rounded-lg w-full bg-white border-orange-200 focus:border-0"
+                    className="input focus:outline-none focus:ring-0 rounded-lg w-full bg-white border-orange-200"
                     autoComplete="new-password"
                     required
                   />

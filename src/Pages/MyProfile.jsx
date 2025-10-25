@@ -32,7 +32,7 @@ const MyProfile = () => {
                 />
               </div>
               <h2 className="text-2xl font-primary font-bold text-center">
-                {user?.displayName || "Set Name"}
+                {user?.displayName || "Not Set"}
               </h2>
               <p className="text-amber-100 text-center mt-2">WarmPaws Member</p>
             </div>
@@ -54,7 +54,7 @@ const MyProfile = () => {
                       </div>
                       <div className="sm:w-2/3">
                         <p className="text-gray-800">
-                          {user?.displayName || "Set Name"}
+                          {user?.displayName || "Not Set"}
                         </p>
                       </div>
                     </div>
@@ -68,7 +68,7 @@ const MyProfile = () => {
                       </div>
                       <div className="sm:w-2/3">
                         <p className="text-gray-800">
-                          {user?.email || "Set Email"}
+                          {user?.email || "Not Set"}
                         </p>
                       </div>
                     </div>
@@ -79,7 +79,7 @@ const MyProfile = () => {
                   {user ? (
                     <Link
                       to="/updateProfile"
-                      className="btn rounded-full btn-primary text-white font-primary hover:bg-gradient-to-br from-amber-400 to-orange-500 px-16 py-5 text-lg"
+                      className="btn rounded-full  text-white font-primary bg-gradient-to-br from-amber-400 to-orange-500 hover:opacity-90 transition px-16 py-5 text-lg"
                     >
                       Update Profile
                     </Link>

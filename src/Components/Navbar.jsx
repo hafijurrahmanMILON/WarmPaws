@@ -43,7 +43,7 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3  p-2 shadow bg-base-100 rounded-box w-48 text-neutral font-bold text-xl"
+            className="menu menu-sm dropdown-content mt-3  p-2 shadow bg-base-100 z-10 rounded-box w-48 text-neutral font-bold text-xl"
           >
             <li>
               <MyLink to="/">Home</MyLink>

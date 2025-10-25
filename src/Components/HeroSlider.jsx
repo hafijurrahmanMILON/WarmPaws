@@ -28,7 +28,7 @@ const HeroSlider = () => {
       >
         {/* Slide 1 */}
         <SwiperSlide>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-28 py-20  px-6 md:px-12 lg:px-5">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-28 py-20 px-6 md:px-12 lg:px-5">
             <div className="space-y-3">
               <h1 className="font-primary text-primary text-4xl md:text-5xl font-bold">
                 Keep Your Cat Cozy <br /> This Winter
@@ -49,16 +49,8 @@ const HeroSlider = () => {
         </SwiperSlide>
 
         {/* Slide 2 */}
-
         <SwiperSlide>
-          <div className="flex flex-col-reverse md:flex-row justify-center items-center gap-6 md:gap-28 py-16  px-6 md:px-12 lg:px-0">
-            <div>
-              <img
-                className="rounded-2xl object-cover"
-                src={img4}
-                alt="Winter Cat Care"
-              />
-            </div>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-28 py-20 px-6 md:px-12 lg:px-5">
             <div className="space-y-3">
               <h1 className="font-primary text-primary text-4xl md:text-5xl font-bold">
                 Warm Hearts, Healthy Pets <br /> All Winter Long
@@ -68,11 +60,19 @@ const HeroSlider = () => {
                 through the cold season.
               </p>
             </div>
+            <div>
+              <img
+                className="rounded-2xl object-cover"
+                src={img4}
+                alt="Winter Cat Care"
+              />
+            </div>
           </div>
         </SwiperSlide>
+
         {/* Slide 3 */}
         <SwiperSlide>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-28 py-16  px-6 md:px-12 lg:px-0">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-28 py-20 px-6 md:px-12 lg:px-5">
             <div className="space-y-3">
               <h1 className="font-primary text-primary text-4xl md:text-5xl font-bold">
                 Winter Wellness for Pets <br /> Starts at Home
@@ -91,25 +91,25 @@ const HeroSlider = () => {
             </div>
           </div>
         </SwiperSlide>
-        {/* Slide 4 */}
 
+        {/* Slide 4 */}
         <SwiperSlide>
-          <div className="flex flex-col-reverse md:flex-row justify-center items-center gap-6 md:gap-28 py-16  px-6 md:px-12 lg:px-0">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-28 py-20 px-6 md:px-12 lg:px-5">
+            <div className="space-y-3">
+              <h1 className="font-primary text-primary text-4xl md:text-5xl font-bold">
+                Cozy Companions <br /> Every Season
+              </h1>
+              <p>
+                Because pets deserve the best warmth, comfort, and love all year
+                round.
+              </p>
+            </div>
             <div>
               <img
                 className="rounded-2xl object-cover"
                 src={img2}
-                alt="Winter Cat Care"
+                alt="Pet Care"
               />
-            </div>
-            <div className="space-y-3">
-              <h1 className="font-primary text-primary text-4xl md:text-5xl font-bold">
-                Warm Hearts, Healthy Pets <br /> All Winter Long
-              </h1>
-              <p>
-                From cozy coats to expert care, we help your furry friend thrive
-                through the cold season.
-              </p>
             </div>
           </div>
         </SwiperSlide>

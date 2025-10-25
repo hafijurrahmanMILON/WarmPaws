@@ -84,7 +84,7 @@ const ServiceDetailsCard = ({ service }) => {
             <input
               type="text"
               placeholder="Your full name"
-              className="input border-0 bg-white w-full"
+              className="input border-0 focus:outline-none focus:ring-0 bg-white w-full"
               required
             />
           </div>
@@ -94,7 +94,7 @@ const ServiceDetailsCard = ({ service }) => {
             <input
               type="email"
               placeholder="Your email address"
-              className="input border-0 bg-white w-full"
+              className="input focus:outline-none focus:ring-0 border-0 bg-white w-full"
               required
             />
           </div>

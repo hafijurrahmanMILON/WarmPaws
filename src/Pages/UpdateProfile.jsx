@@ -61,7 +61,7 @@ const UpdateProfile = () => {
               type="text"
               name="name"
               placeholder="Enter your name"
-              className="input w-full bg-white border-orange-200 focus:border-0"
+              className="input rounded-lg w-full bg-white border-orange-200 focus:outline-none focus:ring-0"
               autoComplete="name"
               // required
             />
@@ -73,13 +73,13 @@ const UpdateProfile = () => {
               type="text"
               name="photoURL"
               placeholder="Enter your photoURL"
-              className="input w-full bg-white border-orange-200 focus:border-0"
+              className="input rounded-lg w-full bg-white border-orange-200 focus:outline-none focus:ring-0"
               autoComplete="photo"
             />
           </div>
           <button
             type="submit"
-            className="btn btn-primary text-white font-primary hover:bg-linear-to-br from-amber-400 to-orange-500 w-full py-3 text-lg mt-2"
+            className="btn rounded-lg  text-white w-full font-primary bg-gradient-to-br from-amber-400 to-orange-500 hover:opacity-90 transition text-lg py-3 mt-3"
           >
             Update Profile
           </button>
