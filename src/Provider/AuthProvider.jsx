@@ -22,31 +22,41 @@ const AuthProvider = ({ children }) => {
   console.log(user);
 
   const createUserFunc = (email, password) => {
-    setLoading(true)
-    return createUserWithEmailAndPassword(auth, email, password);
+    setLoading(true);
+    return createUserWithEmailAndPassword(auth, email, password).finally(() =>
+      setLoading(false)
+    );
   };
 
   const loginFunc = (email, password) => {
-    setLoading(true)
-    return signInWithEmailAndPassword(auth, email, password);
+    setLoading(true);
+    return signInWithEmailAndPassword(auth, email, password).finally(() =>
+      setLoading(false)
+    );
   };
 
   const googleSignIn = () => {
-    setLoading(true)
-    return signInWithPopup(auth, googleProvider);
+    setLoading(true);
+    return signInWithPopup(auth, googleProvider).finally(() =>
+      setLoading(false)
+    );
   };
 
   const signOutFunc = () => {
-    setLoading(true)
-    return signOut(auth);
+    setLoading(true);
+    return signOut(auth).finally(() => setLoading(false));
   };
 
   const updateProfileFunc = (displayName, photoURL) => {
-    return updateProfile(auth.currentUser, { displayName, photoURL });
+    setLoading(true);
+    return updateProfile(auth.currentUser, { displayName, photoURL }).finally(
+      () => setLoading(false)
+    );
   };
 
   const resetPasswordFunc = (email) => {
-    return sendPasswordResetEmail(auth, email);
+    setLoading(true);
+    return sendPasswordResetEmail(auth, email).finally(() => setLoading(false));
   };
 
   useEffect(() => {

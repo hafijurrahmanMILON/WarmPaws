@@ -87,8 +87,9 @@ const Navbar = () => {
               data-tip={user?.displayName || "your name"}
             >
               <img
-                src={user?.photoURL || `${userIcon}`}
-                className="h-12 w-12 object-cover rounded-full"
+                referrerPolicy="no-referrer"
+                src={user?.photoURL || userIcon}
+                className="h-12 w-12 object-cover  border-3 border-primary rounded-full"
                 alt=""
               />
             </div>

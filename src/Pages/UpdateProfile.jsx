@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../Context/AuthContext";
 import toast from "react-hot-toast";
+import userIMG from "../assets/user.png";
 
 const UpdateProfile = () => {
   const { user, setUser, updateProfileFunc } = useContext(AuthContext);
 
-  
   const handleUpdateProfile = (e) => {
-    console.log('updatePRoile')
+    console.log("updatePRoile");
     e.preventDefault();
     const displayName = e.target.name.value;
     const photoURL = e.target.photoURL.value;
@@ -39,8 +39,9 @@ const UpdateProfile = () => {
           <div className="w-48 h-48 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 p-1 mb-1">
             <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
               <img
+                referrerPolicy="no-referrer"
                 className="rounded-full w-full h-full object-cover"
-                src={user?.photoURL}
+                src={user?.photoURL || userIMG}
                 alt=""
               />
             </div>

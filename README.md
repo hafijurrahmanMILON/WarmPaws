@@ -1,16 +1,45 @@
-# React + Vite
+# 🐾 WarmPaws
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🌟 Project Purpose
 
-Currently, two official plugins are available:
+**WarmPaws** is a pet care web application designed to provide helpful tips, services, and guidance for pet owners—especially for keeping their furry friends warm and healthy during winter.  
+Users can sign up, manage their profiles, and explore various pet care services and winter safety tips.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🌍 Live URL
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+👉 [Visit WarmPaws Live Site](https://warmpaws-milon.netlify.app/)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Key Features
+
+- 🔐 **Firebase Authentication** – Secure login & signup using Email/Password and Google.
+- 🧑‍💻 **User Profile Management** – Update user name and photo directly from the app.
+- 🐕 **Service Details Page** – Displays dynamic pet service information using React Router loader.
+- 💡 **Winter Care Tips Section** – Static JSON data showing useful care tips.
+- 💬 **Toast Notifications** – For instant feedback on user actions.
+- 🌈 **Responsive Design** – Fully responsive for mobile, tablet, and desktop.
+- 🎞️ **Animated Hero Slider** – Built with Swiper for smooth autoplay transitions.
+- 🐾 **AOS Animations** – Attractive animations triggered on scroll.
+- 🧭 **SPA Routing** – Handled by React Router DOM without reload errors.
+- ☁️ **Deployed on Netlify** – Ensures smooth hosting and live deployment.
+
+---
+
+## 🧩 NPM Packages Used
+
+| Package              | Purpose                                     |
+| -------------------- | ------------------------------------------- |
+| **react**            | Core library for building UI                |
+| **react-router-dom** | For navigation and dynamic routing          |
+| **firebase**         | Authentication and user data handling       |
+| **react-hot-toast**  | For toast notifications                     |
+| **swiper**           | For responsive hero image slider            |
+| **aos**              | For scroll animations                       |
+| **daisyui**          | Pre-built components on top of Tailwind CSS |
+| **tailwindcss**      | Utility-first CSS framework                 |
+| **vite**             | Fast build tool and development server      |
+
+---

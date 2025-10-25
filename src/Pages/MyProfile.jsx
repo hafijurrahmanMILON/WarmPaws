@@ -22,6 +22,7 @@ const MyProfile = () => {
             <div className="md:w-1/3 bg-gradient-to-br from-amber-400 to-orange-500 p-8 flex flex-col items-center justify-center text-white">
               <div className="w-48 h-48 rounded-full bg-white bg-opacity-20 p-2 mb-6">
                 <img
+                  referrerPolicy="no-referrer"
                   src={user?.photoURL || userIMG}
                   alt=""
                   className="w-full h-full rounded-full object-cover"
