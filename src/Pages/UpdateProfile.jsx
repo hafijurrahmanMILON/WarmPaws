@@ -43,6 +43,9 @@ const UpdateProfile = () => {
                 className="rounded-full w-full h-full object-cover"
                 src={user?.photoURL || userIMG}
                 alt=""
+                onError={(e) => {
+                  e.currentTarget.src = userIMG;
+                }}
               />
             </div>
           </div>

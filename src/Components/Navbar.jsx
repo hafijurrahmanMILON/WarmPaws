@@ -22,7 +22,7 @@ const Navbar = () => {
       });
   };
   return (
-    <div className="navbar  shadow-md px-4 md:px-42">
+    <div className="navbar px-2 md:px-42">
       <div className="navbar-start flex items-center gap-2">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -57,9 +57,9 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className="font-bold text-lg flex items-center gap-2">
-          <img className="w-10" src={logo} alt="WarmPaws Logo" />
-          <p className="text-primary font-extrabold text-2xl font-primary">
+        <div className="font-bold text-lg flex items-center md:gap-2">
+          <img className="w-8 md:w-10" src={logo} alt="WarmPaws Logo" />
+          <p className="text-primary font-extrabold text-md  md:text-2xl font-primary">
             WarmPaws
           </p>
         </div>
@@ -84,18 +84,21 @@ const Navbar = () => {
           <div className="flex justify-center items-center gap-3">
             <div
               className="tooltip  tooltip-bottom"
-              data-tip={user?.displayName || "your name"}
+              data-tip={user?.displayName || "Anonymous user"}
             >
               <img
                 referrerPolicy="no-referrer"
                 src={user?.photoURL || userIcon}
+                onError={(e) => {
+                  e.currentTarget.src = userIcon;
+                }}
                 className="h-12 w-12 object-cover  border-3 border-primary rounded-full"
                 alt=""
               />
             </div>
             <button
               onClick={handleSignOut}
-              className="btn rounded-full font-semibold text-lg p-3  bg-primary text-white hover:bg-gradient-to-br from-amber-400 to-orange-500"
+              className="btn rounded-full font-semibold text-md md:text-xl  py-2 md:p-5 bg-primary text-white hover:bg-gradient-to-br from-amber-400 to-orange-500"
             >
               Log out
             </button>
@@ -104,7 +107,7 @@ const Navbar = () => {
           <div>
             <Link
               to="/login"
-              className="btn rounded-full font-semibold text-xl p-5  bg-primary text-white hover:bg-gradient-to-br from-amber-400 to-orange-500"
+              className="btn rounded-full font-semibold text-md md:text-xl  py-2 md:p-5 bg-primary text-white hover:bg-gradient-to-br from-amber-400 to-orange-500"
             >
               Login
             </Link>

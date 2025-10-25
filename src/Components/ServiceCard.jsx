@@ -3,7 +3,7 @@ import { Link } from "react-router";
 
 const ServiceCard = ({ service }) => {
   // console.log(service);
-  const { image, serviceName, rating, price, serviceId,category } = service;
+  const { image, serviceName, rating, price, serviceId, category } = service;
   return (
     <div className="card w-full rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
       <figure className="h-72 p-3">
@@ -42,7 +42,7 @@ const ServiceCard = ({ service }) => {
         <div className="card-actions">
           <Link
             to={`/serviceDetails/${serviceId}`}
-            className="btn btn-primary border-0 hover:bg-gradient-to-br from-amber-400 to-orange-500 text-white w-full rounded-full font-primary"
+            className="btn border-0 w-full rounded-xl font-primary text-white bg-gradient-to-br from-amber-400 to-orange-500 hover:opacity-90 transition"
           >
             View Details
           </Link>

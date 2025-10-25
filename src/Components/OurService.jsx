@@ -9,7 +9,7 @@ const OurService = () => {
   return (
     <div className="space-y-4">
       <div className="text-center space-y-4 mt-12">
-        <h1 className="font-bold font-primary text-5xl">
+        <h1 className="font-bold font-primary text-3xl md:text-5xl">
           {" "}
           <span className="font-primary text-primary">WarmPaws</span> Winter
           Favorites

@@ -9,7 +9,7 @@ const WinterTips = () => {
   return (
     <div className="py-16 mt-12">
       <div className="text-center mb-10">
-        <h1 className="font-bold font-primary text-5xl">
+        <h1 className="font-bold font-primary text-3xl md:text-5xl">
           {" "}
           Winter Wellness for Your Furry{" "}
           <span className="font-primary text-primary">Friends🐾</span>
@@ -19,8 +19,8 @@ const WinterTips = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-10 md:px-6 lg:px-10 ">
-        {allTips.map((tip,id) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-6 md:px-6 lg:px-24 ">
+        {allTips.map((tip, id) => (
           <div
             key={tip.id}
             data-aos="fade-up"
@@ -28,17 +28,13 @@ const WinterTips = () => {
             className="relative bg-white shadow-md rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-500 group overflow-hidden border border-amber-300"
           >
             <div className="flex justify-center mb-4">
-              <img
-                src={tip.icon}
-                alt={tip.title}
-                className="w-16 h-16 object-contain"
-              />
+              <img src={tip.icon} alt="" className="w-16 h-16 object-contain" />
             </div>
 
             <h3 className="text-lg font-bold font-primary text-primary">
               {tip.title}
             </h3>
-            <p className="text-sm mt-2 font-second">{tip.description}</p>
+            <p className="text-sm mt-1">{tip.description}</p>
             <img
               src={pawPrint}
               alt="paw"

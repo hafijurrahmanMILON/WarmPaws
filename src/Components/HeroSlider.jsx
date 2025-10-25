@@ -1,87 +1,146 @@
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, EffectFade } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/effect-fade";
-import cat1 from "../assets/close-up-cute-cat-green-scarf.jpg";
-import cat2 from "../assets/cute-cat-sweater-lying-snow-playground.jpg";
-import dogIMG from "../assets/dog2.jpg";
+import img1 from "../assets/slider1.jpg";
+import img2 from "../assets/slider5.jpg";
+import img3 from "../assets/slider3.jpg";
+import img4 from "../assets/slider4.jpg";
 
-function HeroSlider() {
+const HeroSlider = () => {
   return (
-    <div className="w-full h-[60vh] md:h-[70vh] lg:h-[90vh] overflow-hidden">
+    <div className="mx-auto bg-gray-100 relative">
       <Swiper
-        spaceBetween={40}
-        slidesPerView={1}
+        spaceBetween={30}
+        centeredSlides={true}
         loop={true}
-        autoplay={{ delay: 4500, disableOnInteraction: false }}
-        speed={1800}
-        effect="fade"
-        pagination={{ clickable: true }}
-        modules={[Autoplay, Pagination, EffectFade]}
-        className="w-full h-full"
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        speed={1200}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Autoplay, Pagination]}
+        className="mySwiper"
       >
         {/* Slide 1 */}
         <SwiperSlide>
-          <div className="relative w-full h-full">
-            <img
-              src={cat1}
-              alt="Cute cat"
-              className="w-full h-full object-cover filter brightness-60 blur-[1px]"
-            />
-
-            <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4">
-              <h2 className="text-2xl md:text-4xl lg:text-7xl font-bold font-primary drop-shadow-lg text-primary">
-                Keep Your Cat Cozy This Winter
-              </h2>
-              <p className="mt-3 text-sm md:text-base lg:text-lg font-second drop-shadow-md">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-28 py-16 md:py-24 px-6 md:px-12 lg:px-5">
+            <div className="space-y-3">
+              <h1 className="font-primary text-primary text-4xl md:text-5xl font-bold">
+                Keep Your Cat Cozy <br /> This Winter
+              </h1>
+              <p>
                 Discover warm outfits and gentle care tips for your furry
                 friend.
               </p>
+            </div>
+            <div>
+              <img
+                className="rounded-2xl object-cover"
+                src={img1}
+                alt="Winter Cat Care"
+              />
             </div>
           </div>
         </SwiperSlide>
 
         {/* Slide 2 */}
+
         <SwiperSlide>
-          <div className="relative w-full h-full">
-            <img
-              src={cat2}
-              alt="Cozy cat"
-              className="w-full h-full object-cover filter brightness-60 blur-[1px]"
-            />
-            <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4">
-              <h2 className="text-2xl md:text-4xl lg:text-7xl font-bold font-primary drop-shadow-lg text-primary">
-                Winter Playtime, Safely
-              </h2>
-              <p className="mt-3 text-sm md:text-base lg:text-lg font-second drop-shadow-md">
-                Fun and safety for your pets in the snow.
+          <div className="flex flex-col-reverse md:flex-row justify-center items-center gap-6 md:gap-28 py-16 md:py-24 px-6 md:px-12 lg:px-0">
+            <div>
+              <img
+                className="rounded-2xl object-cover"
+                src={img4}
+                alt="Winter Cat Care"
+              />
+            </div>
+            <div className="space-y-3">
+              <h1 className="font-primary text-primary text-4xl md:text-5xl font-bold">
+                Warm Hearts, Healthy Pets <br /> All Winter Long
+              </h1>
+              <p>
+                From cozy coats to expert care, we help your furry friend thrive
+                through the cold season.
               </p>
             </div>
           </div>
         </SwiperSlide>
-
         {/* Slide 3 */}
         <SwiperSlide>
-          <div className="relative w-full h-full">
-            <img
-              src={dogIMG}
-              alt="Winter pet"
-              className="w-full h-full object-cover filter brightness-60 blur-[1px]"
-            />
-            <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4">
-              <h2 className="text-2xl md:text-4xl lg:text-7xl font-bold font-primary drop-shadow-lg text-primary">
-                Warm Hearts & Paws
-              </h2>
-              <p className="mt-3 text-sm md:text-base lg:text-lg font-second drop-shadow-md">
-                Keep your pup warm and happy during chilly days.
+          <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-28 py-16 md:py-24 px-6 md:px-12 lg:px-0">
+            <div className="space-y-3">
+              <h1 className="font-primary text-primary text-4xl md:text-5xl font-bold">
+                Winter Wellness for Pets <br /> Starts at Home
+              </h1>
+              <p>
+                Learn how to create a warm, safe space and daily routine for
+                your pet’s winter comfort.
+              </p>
+            </div>
+            <div>
+              <img
+                className="rounded-2xl object-cover"
+                src={img3}
+                alt="Vet Care"
+              />
+            </div>
+          </div>
+        </SwiperSlide>
+        {/* Slide 4 */}
+
+        <SwiperSlide>
+          <div className="flex flex-col-reverse md:flex-row justify-center items-center gap-6 md:gap-28 py-16 md:py-24 px-6 md:px-12 lg:px-0">
+            <div>
+              <img
+                className="rounded-2xl object-cover"
+                src={img2}
+                alt="Winter Cat Care"
+              />
+            </div>
+            <div className="space-y-3">
+              <h1 className="font-primary text-primary text-4xl md:text-5xl font-bold">
+                Warm Hearts, Healthy Pets <br /> All Winter Long
+              </h1>
+              <p>
+                From cozy coats to expert care, we help your furry friend thrive
+                through the cold season.
               </p>
             </div>
           </div>
         </SwiperSlide>
       </Swiper>
+
+      {/* Custom pagination styling */}
+      <style jsx global>{`
+        .swiper-pagination-bullet {
+          background-color: #fef3c7 !important; /* amber-100 */
+          opacity: 0.8 !important;
+          width: 10px !important;
+          height: 10px !important;
+          margin: 0 5px !important;
+          transition: all 0.4s ease !important;
+          border: 1px solid #fbbf24 !important; /* amber-400 border */
+          box-shadow: 0 2px 4px rgba(251, 191, 36, 0.2) !important;
+        }
+        .swiper-pagination-bullet-active {
+          background-color: #ffffff !important; /* white */
+          opacity: 1 !important;
+          transform: scale(1.4) !important;
+          border: 2px solid #d97706 !important; /* amber-600 border */
+          box-shadow: 0 4px 8px rgba(217, 119, 6, 0.3) !important;
+        }
+        .swiper-pagination {
+          position: absolute !important;
+          bottom: 20px !important;
+        }
+      `}</style>
     </div>
   );
-}
+};
 
 export default HeroSlider;

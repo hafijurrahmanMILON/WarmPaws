@@ -21,76 +21,87 @@ const ServiceDetailsCard = ({ service }) => {
   };
 
   return (
-    <div className="max-w-2xl md:min-w-5xl mx-auto bg-white rounded-2xl shadow-lg border border-orange-100 overflow-hidden">
-      <div className="p-6">
-        <img
-          src={image}
-          alt={serviceName}
-          className="w-full max-h-[40vh] object-cover rounded-xl"
-        />
-      </div>
+    <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+      <div className="flex flex-col lg:flex-row">
+        <div className="lg:w-1/2 p-8">
+          <img
+            src={image}
+            alt={serviceName}
+            className="w-full h-96 object-cover rounded-2xl"
+          />
+        </div>
+        <div className="lg:w-1/2 p-8">
+          <div className="space-y-4">
+            <h1 className="text-3xl font-primary font-bold text-primary">
+              {serviceName}
+            </h1>
+            <span className="inline-block px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">
+              {category}
+            </span>
 
-      <div className="px-6 space-y-2">
-        <span className="inline-block px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">
-          {category}
-        </span>
-
-        <h1 className="text-2xl font-primary font-bold text-neutral">
-          {serviceName}
-        </h1>
-
-        <div className="flex items-center gap-4">
-          <div className="flex items-center gap-2">
-            <div className="rating rating-sm">
-              <input type="radio" className="mask mask-star-2 bg-orange-400" />
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2">
+                <div className="rating rating-sm">
+                  <input
+                    type="radio"
+                    name="rating-1"
+                    className="mask mask-star-2 bg-orange-400"
+                    defaultChecked
+                  />
+                </div>
+                <span className="font-semibold text-gray-700">{rating}</span>
+              </div>
+              <span className="text-3xl font-bold text-primary">${price}</span>
             </div>
-            <span className="font-semibold text-gray-700">{rating}</span>
+
+            <p className="text-gray-600 text-lg leading-relaxed">
+              {description}
+            </p>
+
+            <div className="bg-amber-50 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-800 mb-2">
+                Service Provider
+              </h3>
+              <p className="text-gray-700">{providerName}</p>
+              <p className="text-gray-600 text-sm">{providerEmail}</p>
+            </div>
+
+            <div className="text-gray-600">
+              Slots Available:{" "}
+              <strong className="text-primary">{slotsAvailable}</strong>
+            </div>
           </div>
-          <span className="text-2xl font-bold text-primary">${price}</span>
-        </div>
-
-        <p className="text-gray-600">{description}</p>
-
-        <div className="bg-amber-50 rounded-lg p-4">
-          <h3 className="font-semibold text-gray-800 mb-1">Service Provider</h3>
-          <p className="text-gray-700">{providerName}</p>
-          <p className="text-gray-600 text-sm">{providerEmail}</p>
-        </div>
-
-        <div className="text-sm text-gray-600">
-          Slots Available: <strong>{slotsAvailable}</strong>
         </div>
       </div>
-
-      <div className="p-6 bg-amber-50 mt-2 border-t border-orange-200">
-        <h2 className="text-xl font-primary font-bold text-neutral mb-4 text-center">
+      <div className="p-8 bg-amber-50 border-t border-amber-200">
+        <h2 className="text-xl font-primary font-bold text-neutral mb-6 text-center">
           Book This Service
         </h2>
 
-        <form onSubmit={handleToast} className="space-y-2 max-w-md mx-auto">
-          <div className="flex gap-3">
-            <label className=" py-1">Name</label>
+        <form onSubmit={handleToast} className="max-w-md mx-auto space-y-4">
+          <div>
+            <label>Name</label>
             <input
               type="text"
-              placeholder="Your name"
-              className="input w-full border-none bg-white"
+              placeholder="Your full name"
+              className="input border-0 bg-white w-full"
               required
             />
           </div>
 
-          <div className="flex gap-3">
-            <label className=" py-1">Email</label>
+          <div>
+            <label>Email</label>
             <input
               type="email"
-              placeholder="Your email"
-              className="input w-full border-none bg-white"
+              placeholder="Your email address"
+              className="input border-0 bg-white w-full"
               required
             />
           </div>
 
           <button
             type="submit"
-            className="btn btn-primary w-full text-white font-primary hover:bg-gradient-to-br from-amber-400 to-orange-500 mt-4 py-2"
+            className="btn text-white rounded-lg font-primary bg-gradient-to-br from-amber-400 to-orange-500 hover:opacity-90 transition w-full py-3 text-lg mt-4"
           >
             Book Now
           </button>

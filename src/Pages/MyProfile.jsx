@@ -25,11 +25,14 @@ const MyProfile = () => {
                   referrerPolicy="no-referrer"
                   src={user?.photoURL || userIMG}
                   alt=""
+                  onError={(e) => {
+                    e.currentTarget.src = userIMG;
+                  }}
                   className="w-full h-full rounded-full object-cover"
                 />
               </div>
               <h2 className="text-2xl font-primary font-bold text-center">
-                {user?.displayName || "your name"}
+                {user?.displayName || "Set Name"}
               </h2>
               <p className="text-amber-100 text-center mt-2">WarmPaws Member</p>
             </div>
@@ -51,7 +54,7 @@ const MyProfile = () => {
                       </div>
                       <div className="sm:w-2/3">
                         <p className="text-gray-800">
-                          {user?.displayName || ""}
+                          {user?.displayName || "Set Name"}
                         </p>
                       </div>
                     </div>
@@ -64,7 +67,9 @@ const MyProfile = () => {
                         </span>
                       </div>
                       <div className="sm:w-2/3">
-                        <p className="text-gray-800">{user?.email || ""}</p>
+                        <p className="text-gray-800">
+                          {user?.email || "Set Email"}
+                        </p>
                       </div>
                     </div>
                   </div>

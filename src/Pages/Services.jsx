@@ -12,7 +12,7 @@ const Services = () => {
         <h1 className="font-bold font-primary text-5xl">
           {" "}
           <span className="font-primary text-primary">WarmPaws</span> Winter
-          Favorites
+          services
         </h1>
         <p className="font-semibold">
           Explore our most-loved seasonal services for cozy, happy pets.
