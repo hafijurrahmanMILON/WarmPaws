@@ -16,7 +16,7 @@ const MainLayout = () => {
       <header>
         <Navbar></Navbar>
       </header>
-      <main className="">
+      <main>
         <Outlet></Outlet>
       </main>
       <footer>

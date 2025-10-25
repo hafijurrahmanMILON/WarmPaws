@@ -7,11 +7,9 @@ const UpdateProfile = () => {
   const { user, setUser, updateProfileFunc } = useContext(AuthContext);
 
   const handleUpdateProfile = (e) => {
-    console.log("updatePRoile");
     e.preventDefault();
     const displayName = e.target.name.value;
     const photoURL = e.target.photoURL.value;
-    // console.log({ name, photoURL, email, password });
     updateProfileFunc(displayName, photoURL)
       .then(() => {
         setUser({ ...user, displayName, photoURL });

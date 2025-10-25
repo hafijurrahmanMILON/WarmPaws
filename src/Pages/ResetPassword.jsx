@@ -42,14 +42,14 @@ const ResetPassword = () => {
                 defaultValue={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="input w-full bg-white border-orange-200 focus:border-0"
+                className="input rounded-xl w-full bg-white border-orange-200 focus:border-0"
                 autoComplete="email"
                 required
               />
             </div>
             <button
               type="submit"
-              className="btn btn-primary text-white btn-block font-primary hover:bg-gradient-to-br from-amber-400 to-orange-500 text-lg py-3 mt-4"
+              className="btn rounded-xl  text-white btn-block font-primary bg-gradient-to-br from-amber-400 to-orange-500 hover:opacity-90 transition text-lg py-3 mt-4"
             >
               Send Reset Link
             </button>

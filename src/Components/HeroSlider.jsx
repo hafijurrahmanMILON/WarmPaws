@@ -28,7 +28,7 @@ const HeroSlider = () => {
       >
         {/* Slide 1 */}
         <SwiperSlide>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-28 py-16 md:py-24 px-6 md:px-12 lg:px-5">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-28 py-20  px-6 md:px-12 lg:px-5">
             <div className="space-y-3">
               <h1 className="font-primary text-primary text-4xl md:text-5xl font-bold">
                 Keep Your Cat Cozy <br /> This Winter
@@ -51,7 +51,7 @@ const HeroSlider = () => {
         {/* Slide 2 */}
 
         <SwiperSlide>
-          <div className="flex flex-col-reverse md:flex-row justify-center items-center gap-6 md:gap-28 py-16 md:py-24 px-6 md:px-12 lg:px-0">
+          <div className="flex flex-col-reverse md:flex-row justify-center items-center gap-6 md:gap-28 py-16  px-6 md:px-12 lg:px-0">
             <div>
               <img
                 className="rounded-2xl object-cover"
@@ -72,7 +72,7 @@ const HeroSlider = () => {
         </SwiperSlide>
         {/* Slide 3 */}
         <SwiperSlide>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-28 py-16 md:py-24 px-6 md:px-12 lg:px-0">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-28 py-16  px-6 md:px-12 lg:px-0">
             <div className="space-y-3">
               <h1 className="font-primary text-primary text-4xl md:text-5xl font-bold">
                 Winter Wellness for Pets <br /> Starts at Home
@@ -94,7 +94,7 @@ const HeroSlider = () => {
         {/* Slide 4 */}
 
         <SwiperSlide>
-          <div className="flex flex-col-reverse md:flex-row justify-center items-center gap-6 md:gap-28 py-16 md:py-24 px-6 md:px-12 lg:px-0">
+          <div className="flex flex-col-reverse md:flex-row justify-center items-center gap-6 md:gap-28 py-16  px-6 md:px-12 lg:px-0">
             <div>
               <img
                 className="rounded-2xl object-cover"

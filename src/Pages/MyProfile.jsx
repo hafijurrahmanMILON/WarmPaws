@@ -86,7 +86,7 @@ const MyProfile = () => {
                   ) : (
                     <Link
                       to="/login"
-                      className="btn rounded-full btn-primary text-white font-primary hover:bg-gradient-to-br from-amber-400 to-orange-500 px-16 py-5 text-lg"
+                      className="btn rounded-full  text-white font-primary bg-gradient-to-br from-amber-400 to-orange-500 hover:opacity-90 transition px-16 py-5 text-lg"
                     >
                       Login
                     </Link>

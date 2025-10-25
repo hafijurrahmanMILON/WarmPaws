@@ -23,7 +23,6 @@ const Signup = () => {
     const photoURL = e.target.photoURL.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    // console.log({ name, photoURL, email, password });
     const regExPass = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
     if (!regExPass.test(password)) {
       setError(true);
@@ -40,7 +39,7 @@ const Signup = () => {
             navigate("/");
           })
           .catch((error) => {
-            console.log(error.code);
+            console.log(error.message);
             toast.error(error.code);
           });
       })
@@ -82,13 +81,19 @@ const Signup = () => {
   const handleGoogleSignIn = () => {
     googleSignIn()
       .then((result) => {
-        console.log(result.user);
         toast.success("Google SignIn Successful");
         setUser(result.user);
         navigate("/");
       })
       .catch((error) => {
-        console.log(error.message);
+        console.log(error);
+        if (error.code === "auth/popup-closed-by-user") {
+          toast.error("Sign-in popup was closed before completion.");
+        } else if (error.code === "auth/network-request-failed") {
+          toast.error("Network error. Please check your connection.");
+        } else {
+          toast.error("Google Sign-in failed. Please try again.");
+        }
       });
   };
 
@@ -137,7 +142,7 @@ const Signup = () => {
                     type="text"
                     name="name"
                     placeholder="Enter your name"
-                    className="input w-full bg-white border-orange-200 focus:border-0"
+                    className="input rounded-lg w-full bg-white border-orange-200 focus:border-0"
                     autoComplete="name"
                     // required
                   />
@@ -149,7 +154,7 @@ const Signup = () => {
                     type="text"
                     name="photoURL"
                     placeholder="Enter your photoURL"
-                    className="input w-full bg-white border-orange-200 focus:border-0"
+                    className="input rounded-lg w-full bg-white border-orange-200 focus:border-0"
                     autoComplete="photo"
                   />
                 </div>
@@ -160,7 +165,7 @@ const Signup = () => {
                     type="email"
                     name="email"
                     placeholder="Enter your email"
-                    className="input w-full bg-white border-orange-200 focus:border-0"
+                    className="input rounded-lg w-full bg-white border-orange-200 focus:border-0"
                     autoComplete="email"
                     required
                   />
@@ -172,7 +177,7 @@ const Signup = () => {
                     type={show ? `text` : `password`}
                     name="password"
                     placeholder="Enter your password"
-                    className="input w-full bg-white border-orange-200 focus:border-0"
+                    className="input rounded-lg w-full bg-white border-orange-200 focus:border-0"
                     autoComplete="new-password"
                     required
                   />
@@ -191,7 +196,7 @@ const Signup = () => {
                 )}
                 <button
                   type="submit"
-                  className="btn btn-primary text-white w-full font-primary hover:bg-gradient-to-br from-amber-400 to-orange-500 text-lg py-3 mt-3"
+                  className="btn rounded-lg  text-white w-full font-primary bg-gradient-to-br from-amber-400 to-orange-500 hover:opacity-90 transition text-lg py-3 mt-3"
                 >
                   Register
                 </button>
@@ -200,7 +205,7 @@ const Signup = () => {
 
               <button
                 onClick={handleGoogleSignIn}
-                className="btn btn-outline w-full border-gray-300 hover:bg-gray-50 text-gray-700"
+                className="btn rounded-lg btn-outline w-full border-gray-300 hover:bg-gray-50 text-gray-700"
               >
                 <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24">
                   <path

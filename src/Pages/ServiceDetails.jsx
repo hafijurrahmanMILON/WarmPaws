@@ -6,8 +6,8 @@ const ServiceDetails = () => {
   const { id } = useParams();
   const allService = useLoaderData();
   const [service, setService] = useState({});
-  console.log(id, allService);
-  console.log(service);
+  // console.log(id, allService);
+  // console.log(service);
 
   useEffect(() => {
     const detailedService = allService.find(

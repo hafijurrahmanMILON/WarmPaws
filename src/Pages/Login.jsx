@@ -5,14 +5,11 @@ import { AuthContext } from "../Context/AuthContext";
 import toast from "react-hot-toast";
 
 const Login = () => {
-  // const emailRef = useRef();
-  // console.log(emailRef.current.value);
   const { loginFunc, setUser, googleSignIn, email, setEmail } =
     useContext(AuthContext);
   const [show, setShow] = useState(false);
 
   const location = useLocation();
-  console.log(location);
   const from = location.state || "/";
   const navigate = useNavigate();
 
@@ -20,10 +17,8 @@ const Login = () => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    // console.log({ email, password });
     loginFunc(email, password)
       .then((result) => {
-        console.log(result.user);
         toast.success("SignIn Successful");
         setUser(result.user);
         navigate(from);
@@ -48,20 +43,26 @@ const Login = () => {
         } else {
           toast.error("Sign-in failed. Please try again.");
         }
-        console.log(error);
+        console.log(error.message);
       });
   };
 
   const handleGoogleSignIn = () => {
     googleSignIn()
       .then((result) => {
-        console.log(result.user);
         toast.success("Google SignIn Successful");
         setUser(result.user);
         navigate(from);
       })
       .catch((error) => {
-        console.log(error.message);
+        console.log(error);
+        if (error.code === "auth/popup-closed-by-user") {
+          toast.error("Sign-in popup was closed before completion.");
+        } else if (error.code === "auth/network-request-failed") {
+          toast.error("Network error. Please check your connection.");
+        } else {
+          toast.error("Google Sign-in failed. Please try again.");
+        }
       });
   };
   return (
@@ -111,7 +112,7 @@ const Login = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your email"
-                    className="input w-full bg-white border-orange-200 focus:border-0"
+                    className="input rounded-lg w-full bg-white border-orange-200 focus:border-0"
                     autoComplete="email"
                     required
                   />
@@ -123,7 +124,7 @@ const Login = () => {
                     type={show ? `text` : `password`}
                     name="password"
                     placeholder="Enter your password"
-                    className="input w-full bg-white border-orange-200 focus:border-0"
+                    className="input rounded-lg w-full bg-white border-orange-200 focus:border-0"
                     autoComplete="new-password"
                     required
                   />
@@ -146,7 +147,7 @@ const Login = () => {
 
                 <button
                   type="submit"
-                  className="btn btn-primary text-white btn-block font-primary hover:bg-gradient-to-br from-amber-400 to-orange-500 text-lg py-3"
+                  className="btn rounded-lg text-white w-full font-primary bg-gradient-to-br from-amber-400 to-orange-500 hover:opacity-90 transition text-lg py-3"
                 >
                   Login
                 </button>
@@ -156,7 +157,7 @@ const Login = () => {
 
               <button
                 onClick={handleGoogleSignIn}
-                className="btn btn-outline w-full border-gray-300 hover:bg-gray-50 text-gray-700"
+                className="btn rounded-lg btn-outline w-full border-gray-300 hover:bg-gray-50 text-gray-700"
               >
                 <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24">
                   <path

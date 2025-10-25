@@ -8,7 +8,7 @@ import toast from "react-hot-toast";
 
 const Navbar = () => {
   const { user, setUser, signOutFunc } = useContext(AuthContext);
-  console.log(user);
+  // console.log(user);
 
   const handleSignOut = () => {
     signOutFunc()
