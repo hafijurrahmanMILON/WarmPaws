@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div>
       <HeroSlider></HeroSlider>
-      <div className="container md:w-10/12 mx-auto  px-5">
+      <div className="container md:w-11/12 mx-auto  px-3 md:px-0">
         <div>
           <OurService></OurService>
         </div>

@@ -5,6 +5,11 @@ import { useContext } from "react";
 import { AuthContext } from "../Context/AuthContext";
 import userIcon from "../assets/user.png";
 import toast from "react-hot-toast";
+import {
+  IoLogInOutline,
+  IoLogOutOutline,
+  IoPersonAddOutline,
+} from "react-icons/io5";
 
 const Navbar = () => {
   const { user, setUser, signOutFunc } = useContext(AuthContext);
@@ -22,7 +27,7 @@ const Navbar = () => {
       });
   };
   return (
-    <div className="navbar px-2 md:px-42">
+    <div className="navbar shadow-sm px-2 md:px-12 lg:px-42">
       <div className="navbar-start flex items-center gap-2">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -98,18 +103,27 @@ const Navbar = () => {
             </div>
             <button
               onClick={handleSignOut}
-              className="btn rounded-full font-semibold text-md md:text-xl  py-2 md:p-5 bg-primary text-white hover:bg-gradient-to-br from-amber-400 to-orange-500"
+              className="flex items-center gap-2 font-semibold text-sm md:text-lg py-2 px-4 bg-gradient-to-r from-amber-400 to-orange-500 text-white rounded-xl shadow-lg  hover:from-amber-500 hover:to-orange-600"
             >
+              <IoLogOutOutline />
               Log out
             </button>
           </div>
         ) : (
-          <div>
+          <div className="flex items-center gap-3">
             <Link
               to="/login"
-              className="btn rounded-full font-semibold text-md md:text-xl  py-2 md:p-5 bg-primary text-white hover:bg-gradient-to-br from-amber-400 to-orange-500"
+              className="flex items-center gap-2 font-semibold text-sm md:text-lg py-2 px-4 bg-white text-amber-600 border border-amber-200 rounded-xl shadow-lg  hover:bg-amber-50"
             >
+              <IoLogInOutline />
               Login
+            </Link>
+            <Link
+              to="/signup"
+              className="flex items-center gap-2 font-semibold text-sm md:text-lg py-2 px-4 bg-gradient-to-r from-amber-400 to-orange-500 text-white rounded-xl shadow-lg  hover:from-amber-500 hover:to-orange-600"
+            >
+              <IoPersonAddOutline />
+              SignUp
             </Link>
           </div>
         )}
@@ -119,3 +133,17 @@ const Navbar = () => {
 };
 
 export default Navbar;
+<div className="flex items-center">
+  <Link
+    to="/login"
+    className="font-semibold text-sm md:text-lg py-2 px-2 md:px-4 bg-amber-400 text-white hover:bg-gradient-to-br from-amber-400 to-orange-500  rounded-l-xl"
+  >
+    Login
+  </Link>
+  <Link
+    to="/signup"
+    className="font-semibold text-sm md:text-lg py-2 px-2 md:px-3 bg-primary text-white hover:bg-gradient-to-br from-amber-400 to-orange-500  rounded-r-xl"
+  >
+    SignUp
+  </Link>
+</div>;
