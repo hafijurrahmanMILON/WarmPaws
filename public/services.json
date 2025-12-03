@@ -37,6 +37,18 @@
   },
   {
     "serviceId": 4,
+    "serviceName": "Heated Bed Installation",
+    "providerName": "WarmNest Solutions",
+    "providerEmail": "support@warmnest.com",
+    "price": 45,
+    "rating": 4.7,
+    "slotsAvailable": 5,
+    "description": "Safe heated bed setup and advice for small to medium pets.",
+    "image": "https://i.ibb.co.com/mCQgnS5T/heated-bed.jpg",
+    "category": "Accessories"
+  },
+  {
+    "serviceId": 5,
     "serviceName": "Cold-Weather Nutrition Plan",
     "providerName": "VetCare Nutrition",
     "providerEmail": "nutrition@vetcare.com",
@@ -48,7 +60,7 @@
     "category": "Nutrition"
   },
   {
-    "serviceId": 5,
+    "serviceId": 6,
     "serviceName": "Paw Balm & Ice-Protection Treatment",
     "providerName": "Paw Protectors",
     "providerEmail": "contact@pawprotect.com",
@@ -60,7 +72,19 @@
     "category": "Grooming"
   },
   {
-    "serviceId": 6,
+    "serviceId": 7,
+    "serviceName": "Emergency Cold Care Consult",
+    "providerName": "QuickVet Online",
+    "providerEmail": "help@quickvet.com",
+    "price": 35,
+    "rating": 4.95,
+    "slotsAvailable": 2,
+    "description": "Video consult for cold-related pet emergencies and first-aid tips.",
+    "image": "https://i.ibb.co.com/391LCg7J/cold-care.jpg",
+    "category": "Consultation"
+  },
+  {
+    "serviceId": 8,
     "serviceName": "Emergency Cold Care Consult",
     "providerName": "QuickVet Online",
     "providerEmail": "help@quickvet.com",

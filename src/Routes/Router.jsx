@@ -10,6 +10,7 @@ import PrivateRoute from "../Private/PrivateRoute";
 import RouteError from "../Components/RouteError";
 import UpdateProfile from "../Pages/UpdateProfile";
 import ResetPassword from "../Pages/ResetPassword";
+import ContactUs from "../Pages/ContactUs";
 
 export const router = createBrowserRouter([
   // {
@@ -30,8 +31,12 @@ export const router = createBrowserRouter([
         Component: Services,
       },
       {
+        path: "/contact",
+        Component: ContactUs,
+      },
+      {
         path: "/profile",
-        Component: MyProfile,
+        element: <PrivateRoute><MyProfile></MyProfile></PrivateRoute>,
       },
       {
         path: "/serviceDetails/:id",

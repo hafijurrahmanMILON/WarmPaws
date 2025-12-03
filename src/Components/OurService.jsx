@@ -18,7 +18,7 @@ const OurService = () => {
           Explore our most-loved seasonal services for cozy, happy pets.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         {allService.map((service) => (
           <ServiceCard key={service.serviceId} service={service}></ServiceCard>
         ))}

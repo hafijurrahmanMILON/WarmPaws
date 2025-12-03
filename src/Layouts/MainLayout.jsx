@@ -13,7 +13,7 @@ const MainLayout = () => {
   }
   return (
     <div className="flex flex-col min-h-screen">
-      <header>
+      <header className="sticky top-0 z-50">
         <Navbar></Navbar>
       </header>
       <main>

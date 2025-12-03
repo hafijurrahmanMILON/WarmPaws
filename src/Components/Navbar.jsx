@@ -27,7 +27,7 @@ const Navbar = () => {
       });
   };
   return (
-    <div className="navbar shadow-sm px-2 md:px-12 lg:px-42">
+    <div className="navbar bg-white shadow-sm px-2 md:px-12 lg:px-42">
       <div className="navbar-start flex items-center gap-2">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -56,17 +56,19 @@ const Navbar = () => {
             <li>
               <MyLink to="/service">Services</MyLink>
             </li>
-            <li>
-              <MyLink to="profile">My Profile</MyLink>
-            </li>
+            {user && (
+              <li>
+                <MyLink to="profile">My Profile</MyLink>
+              </li>
+            )}
           </ul>
         </div>
 
         <div className="font-bold text-lg flex items-center md:gap-2">
           <img className="w-8 md:w-10" src={logo} alt="WarmPaws Logo" />
-          <p className="text-primary font-extrabold text-md  md:text-2xl font-primary">
+          <Link to="/" className="text-primary font-extrabold text-md  md:text-2xl font-primary">
             WarmPaws
-          </p>
+          </Link>
         </div>
       </div>
 
@@ -79,8 +81,13 @@ const Navbar = () => {
             <MyLink to="/service">Services</MyLink>
           </li>
           <li>
-            <MyLink to="profile">My Profile</MyLink>
+            <MyLink to="/contact">Contact Us</MyLink>
           </li>
+          {user && (
+            <li>
+              <MyLink to="profile">My Profile</MyLink>
+            </li>
+          )}
         </ul>
       </div>
 
@@ -133,7 +140,8 @@ const Navbar = () => {
 };
 
 export default Navbar;
-<div className="flex items-center">
+{
+  /* <div className="flex items-center">
   <Link
     to="/login"
     className="font-semibold text-sm md:text-lg py-2 px-2 md:px-4 bg-amber-400 text-white hover:bg-gradient-to-br from-amber-400 to-orange-500  rounded-l-xl"
@@ -146,4 +154,5 @@ export default Navbar;
   >
     SignUp
   </Link>
-</div>;
+</div>; */
+}

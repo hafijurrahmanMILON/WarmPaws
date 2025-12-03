@@ -8,8 +8,10 @@ import ExtraSection from "../Components/ExtraSection";
 const Home = () => {
   return (
     <div>
-      <HeroSlider></HeroSlider>
-      <div className="container md:w-11/12 mx-auto  px-3 md:px-0">
+      <div>
+        <HeroSlider></HeroSlider>
+      </div>
+      <div className="container md:w-11/12 mx-auto  px-3 md:px-0 mt-20">
         <div>
           <OurService></OurService>
         </div>

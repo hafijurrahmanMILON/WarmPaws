@@ -10,7 +10,7 @@ import img4 from "../assets/slider4.jpg";
 
 const HeroSlider = () => {
   return (
-    <div className="mx-auto bg-gray-100 relative">
+    <div className="mx-auto  h-[75vh] bg-gray-100">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -40,7 +40,7 @@ const HeroSlider = () => {
             </div>
             <div>
               <img
-                className="rounded-2xl object-cover"
+                className="rounded-2xl w-5/6"
                 src={img1}
                 alt="Winter Cat Care"
               />
@@ -62,7 +62,7 @@ const HeroSlider = () => {
             </div>
             <div>
               <img
-                className="rounded-2xl object-cover"
+                className="rounded-2xl w-4/5"
                 src={img4}
                 alt="Winter Cat Care"
               />
@@ -84,7 +84,7 @@ const HeroSlider = () => {
             </div>
             <div>
               <img
-                className="rounded-2xl object-cover"
+                className="rounded-2xl w-4/5"
                 src={img3}
                 alt="Vet Care"
               />
@@ -106,7 +106,7 @@ const HeroSlider = () => {
             </div>
             <div>
               <img
-                className="rounded-2xl object-cover"
+                className="rounded-2xl w-4/5"
                 src={img2}
                 alt="Pet Care"
               />
@@ -135,8 +135,7 @@ const HeroSlider = () => {
           box-shadow: 0 4px 8px rgba(217, 119, 6, 0.3) !important;
         }
         .swiper-pagination {
-          position: absolute !important;
-          bottom: 20px !important;
+          bottom: 40px !important;
         }
       `}</style>
     </div>
