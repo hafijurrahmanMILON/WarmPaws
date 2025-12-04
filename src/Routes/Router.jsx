@@ -11,6 +11,7 @@ import RouteError from "../Components/RouteError";
 import UpdateProfile from "../Pages/UpdateProfile";
 import ResetPassword from "../Pages/ResetPassword";
 import ContactUs from "../Pages/ContactUs";
+import AboutUs from "../Pages/AboutUs";
 
 export const router = createBrowserRouter([
   // {
@@ -31,12 +32,20 @@ export const router = createBrowserRouter([
         Component: Services,
       },
       {
+        path: "/about",
+        Component: AboutUs,
+      },
+      {
         path: "/contact",
         Component: ContactUs,
       },
       {
         path: "/profile",
-        element: <PrivateRoute><MyProfile></MyProfile></PrivateRoute>,
+        element: (
+          <PrivateRoute>
+            <MyProfile></MyProfile>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/serviceDetails/:id",

@@ -56,6 +56,12 @@ const Navbar = () => {
             <li>
               <MyLink to="/service">Services</MyLink>
             </li>
+            <li>
+              <MyLink to="/about-us">About Us</MyLink>
+            </li>
+            <li>
+              <MyLink to="/contact-us">Contact Us</MyLink>
+            </li>
             {user && (
               <li>
                 <MyLink to="profile">My Profile</MyLink>
@@ -66,7 +72,10 @@ const Navbar = () => {
 
         <div className="font-bold text-lg flex items-center md:gap-2">
           <img className="w-8 md:w-10" src={logo} alt="WarmPaws Logo" />
-          <Link to="/" className="text-primary font-extrabold text-md  md:text-2xl font-primary">
+          <Link
+            to="/"
+            className="text-primary font-extrabold text-md  md:text-2xl font-primary"
+          >
             WarmPaws
           </Link>
         </div>
@@ -79,6 +88,9 @@ const Navbar = () => {
           </li>
           <li>
             <MyLink to="/service">Services</MyLink>
+          </li>
+          <li>
+            <MyLink to="/about">About Us</MyLink>
           </li>
           <li>
             <MyLink to="/contact">Contact Us</MyLink>
